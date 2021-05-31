@@ -17,10 +17,11 @@ export class FullScreenComponent implements OnInit {
 
   ngOnInit(): void {
 
-    ( mapboxgl as any ).accessToken = 'pk.eyJ1IjoiamNhbWlsb3ZlbGFuZGlhYiIsImEiOiJja3BjMWh3dXQxMnc5Mm5ueml4a2ZsOXVqIn0.OdbCutgvxknlsBsCpid4dw';
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11'
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [ -74.03773325096206, 4.753235974221012 ],
+      zoom: 16
     });
 
   }
