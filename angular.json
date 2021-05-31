@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mapsApp"
+    }
+  },
+  "defaultProject": "mapsApp",
+  "cli": {
+    "analytics": "15baf023-e8e2-4b0f-8099-742374fe6497"
+  }
 }
