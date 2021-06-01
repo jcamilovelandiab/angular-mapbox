@@ -9,6 +9,11 @@
         <input
             type="range"
             class="form-range"
+            [value]="zoomLevel"
+            min="0"
+            max="18"
+            #zoomInput
+            (input)="zoomChanged( zoomInput.value )"
         >
     </div>
     <div class="col-12">
