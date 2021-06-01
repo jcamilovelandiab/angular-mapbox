@@ -9,6 +9,15 @@ import * as mapboxgl from 'mapbox-gl';
       height: 100%;
       width: 100%;
     }
+    .list-group {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-Index: 99;
+    }
+    li {
+      cursor: pointer;
+    }
   `]
 })
 export class MarkersComponent implements AfterViewInit {
@@ -29,10 +38,21 @@ export class MarkersComponent implements AfterViewInit {
       zoom: this.zoomLevel
     });
 
-    const marker = new mapboxgl.Marker()
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat( this.center )
+    //     .addTo( this.map );
+
+  }
+
+  addMarker() {
+
+    const color = "#xxxxxx".replace(/x/g, y=>(Math.random()*16|0).toString(16));
+    const newMarker = new mapboxgl.Marker({
+          draggable: true,
+          color
+        })
         .setLngLat( this.center )
         .addTo( this.map );
-
   }
 
 }
