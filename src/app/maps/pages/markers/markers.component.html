@@ -5,8 +5,15 @@
     >
         + Add
     </li>
-    <li class="list-group-item">
-        marker 1
+    <li
+        class="list-group-item"
+        (click)="goToMarker()"
+        *ngFor="let marker of markers; let i = index"
+        [ngStyle]="{
+            'background-color': marker.color
+        }"
+    >
+        marker {{ i + 1 }}
     </li>
 </ul>
 
